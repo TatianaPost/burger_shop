@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    // border: 1px solid #ff0000;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: ubuntu;
+    line-height: 1.42;
+    font-size: 14px;
+    position: relative;
+    background-color: #808080;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    min-height: 655px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+}
