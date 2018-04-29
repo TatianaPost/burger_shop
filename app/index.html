@@ -1,86 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BURGER</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-	<link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BURGER</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-	<div class="wrapper">
-		<section class="section main is-active">
-			<main class="container">
-				<header class="main__header">
-					<div class="main-wrap__header__logo">
-						<a class="main-wrap__header__logo__link" href="#">
-							<img class="main-wrap__header__logo__link__img" src="./img/logo/logo.svg" alt="Logo">
-						</a>
-					</div>
-					<nav class="main-wrap__header__menu">
-						<ul class="header__menu__list">
-							<li class="header__menu__item">
-								<a class="header__menu__item__link" href="#" >О Нас</a>
-							</li>
-							<li class="header__menu__item">
-								•
-							</li>
-							<li class="header__menu__item">
-								<a class="header__menu__item__link" href="#" >Бургеры</a>
-							</li>
-							<li class="header__menu__item">
-								•
-							</li>
-							<li class="header__menu__item">
-								<a class="header__menu__item__link" href="#" >команда</a>
-							</li>
-							<li class="header__menu__item">
-								•
-							</li>
-							<li class="header__menu__item">
-								<a class="header__menu__item__link" href="#" >меню</a>
-							</li>
-							<li class="header__menu__item">
-								•
-							</li>
-							<li class="header__menu__item">
-								<a class="header__menu__item__link" href="#" >Отзывы</a>
-							</li>
-							<li class="header__menu__item">
-								•
-							</li>
-							<li class="header__menu__item">
-								<a class="header__menu__item__link" href="#" >Контакты</a>
-							</li>
-						</ul>
-					</nav>
-					<button class="btn" type="button">
-						Заказать
-					</button>
-				</header>
-				<article class="main-container">
-					<div class="main__burger-image">
-						<img class="main__burger-image__img" src="./img/bg/burger_main.png" alt="Burger">
-					</div>
-					<div class="main__text">
-						<p class="text_1">МЫ ДЕЛАЕМ</p>
-						<p class="text_2">натуральные бургеры</p>
-					</div>
-				</article>
-				<div class="main__arrow-down">
-					<img src="./img/punctuation/arrow-scroll.png" alt="" class="main__arrow__link__img">
-				</div>
-			</main>
-		</section>
-		<section class="section we"></section>
-		<section class="section"></section>
-		<section class="section"></section>
-		<section class="section"></section>
-		<section class="section"></section>
-		<section class="section"></section>
-	</div>
+  <div class="wrapper">
+    <div class="maincontent">
+      <section class="section do is-active">
+        <div class="container do__container">
+          <header class="header">
+            <div class="header__logo">
+              <a class="header__logo__link" href="#">
+                <img class="header__logo__link__img" src="./img/logo/logo.svg" alt="Logo"> Лучшие бургеры в питере
+              </a>
+            </div>
+            <div class="header__menu">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a class="nav__item__link" href="#">
+                      о нас
+                    </a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__item__link" href="#">
+                      бургеры
+                    </a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__item__link" href="#">
+                      команда
+                    </a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__item__link" href="#">
+                      меню
+                    </a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__item__link" href="#">
+                      отзывы
+                    </a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__item__link" href="#">
+                      контакты
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__btn">
+              <a class="btn__link" href="#">
+                Заказать
+              </a>
+            </div>
+          </header>
+          <main class="do__main">
+            <div class="burger-image">
+              <img class="burger-image__img" src="./img/do/burger/burger_main.png" alt="Burger">
+            </div>
+            <div class="do__description">
+              <h2 class="section__title">
+                мы делаем
+              </h2>
+              <div class="do__description-text">
+                натуральные бургеры
+              </div>
+            </div>
+          </main>
+          <div class="main__arrow-down">
+            <img src="./img/punctuation/arrow-scroll.png" alt="" class="main__arrow__link__img">
+          </div>
+        </div>
+      </section>
+      <section class="section best">
+        <div class="container best-container">
+          <h2 class="section__title section_title_best">
+            мы лучшие
+          </h2>
+          <div class="best__blocks">
+            <div class="best__blocks__img">
+              <img src="./img/best/icons/meat.png" alt="">
+              <div class="best__blocks__descriptionn"></div>
+            </div>
+          </div>
+          <div class="best__blocks">
+            <div class="best__blocks__img">
+              <img src="./img/best/icons/hand.png" alt="">
+              <div class="best__blocks__descriptionn"></div>
+            </div>
+          </div>
+          <div class="best__blocks">
+            <div class="best__blocks__img">
+              <img src="./img/best/icons/natural.png" alt="">
+              <div class="best__blocks__descriptionn"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section burger">
+        <div class="container burger-container">
+          <h2 class="section__title section_title_burger">
+           dark beef burger
+          </h2>
+        </div>
+      </section>
+      <section class="section team">
+        <div class="container team-container">
+          <h2 class="section__title section_title_team">
+            команда
+          </h2>
+        </div>
+      </section>
+      <section class="section menu">
+        <div class="container menu-container">
+          <h2 class="section__title section_title_menu">
+            меню
+          </h2>
+        </div>
+      </section>
+      <section class="section reviews">
+      </section>
+      <section class="section order">
+        <div class="container order-container">
+          <h2 class="section__title section_title_order">
+            закажите доставку
+          </h2>
+        </div>
+      </section>
+      <section class="section map">
+        <div class="container map-container">
+          <h2 class="section__title section_title_map">
+            мы лучшие
+          </h2>
+        </div>
+      </section>
+    </div>
+  </div>
+  <aside class="nav-sidebar"></aside>
 </body>
 <script src="./libs/jquery-3.3.1.min.js"></script>
 <script src="./js/app.min.js"></script>
+
 </html>

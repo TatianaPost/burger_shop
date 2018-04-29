@@ -1,0 +1,110 @@
+.do {
+    background: url('../img/do/bg/bg__do.jpg') 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.header {
+    padding-top: 10px;
+    height: 91px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__logo {
+    width: 105px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.header__menu {
+    display: block;
+    margin-left: auto;
+}
+
+.nav__list::after {
+  content: "";
+  display: block;
+  clear: both;
+
+}
+
+.nav__item {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.nav__item__link {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    &::after {
+        content: "•";
+        display: inline-block;
+        margin-left: 10px; // content: "";
+        // display: inline-block;
+        // vertical-align: middle;
+        // width: 4px;
+        // height: 4px;
+        // border-radius: 50%;
+        // background: white;
+        // margin: 0 0.875rem;
+    }
+}
+
+.header__btn {
+    margin-left: 12px;
+    width: 90px;
+    height: 35px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: $orange;
+    border: 1px solid transparent;
+    text-align: center;
+    vertical-align: top;
+}
+
+.btn__link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.do__main {
+    width: 100%;
+    display: flex;
+}
+
+.burger-image {
+    margin-right: 25px;
+}
+
+.do__description {
+    padding-top: 65px;
+}
+
+.section__title {
+    font-family: "Gagalin", cursive;
+    color: #f9b43b;
+    font-size: 72px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.do__description-text {
+    margin-top: 0;
+    font-family: "LifeHack";
+    color: #fff;
+    font-size: 65px;
+    line-height: 1;
+}
+
+.main__arrow-down {
+    margin: 80px auto 0 auto;
+}

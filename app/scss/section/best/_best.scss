@@ -1,0 +1,11 @@
+.best {
+    background: url('../img/best/bg/bg__best.jpg') 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.section_title_best {
+    color: $dark;
+}
+.best__blocks {
+    display: flex;
+}
