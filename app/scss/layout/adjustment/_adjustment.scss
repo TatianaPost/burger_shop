@@ -1,0 +1,44 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.maincontent {
+    height: 100%;
+    min-height: 650px;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.section {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.31);
+    overflow: hidden;
+    min-width: 940px;
+    min-height: 650px;
+}
+
+.btn__link {
+    display: inline-block;
+    min-width: rem(98px);
+    padding: rem(10px) rem(17px);
+    border-radius: 5px;
+    background-color: $orange;
+    color: #fff;
+    font-size: rem(13px);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.4s;
+    &:hover {
+        background-color: darken($orange, 8%);
+    }
+}

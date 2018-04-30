@@ -1,7 +1,8 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box; // border: 1px solid #ff0000;
+    box-sizing: border-box;
+    // border: 1px solid #ff0000;
 }
 
 html,
@@ -15,7 +16,8 @@ body {
 body {
     font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
     line-height: 1.42;
-    color: $dark;
+    color: $white;
+    font-size: rem(14px);
     position: relative;
     background-color: #808080;
     -webkit-font-smoothing: antialiased;
@@ -52,24 +54,22 @@ a {
     clear: both;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
+.nav-sidebar {
+    position: fixed;
+    right: 7%;
+    top: 20%;
 }
 
-.section {
-    width: 100%;
-    height: 100vh;
-    min-height: 655px;
-    overflow: hidden;
-    display: flex;
+.nav-sidebar__item {
+    display: list-item;
 }
 
-.container {
-    max-width: 1040px;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: column nowrap;
+.nav-sidebar__item__link {
+    cursor: pointer;
+    width: 5px;
+    height: 5px;
+    &::before {
+        content: " ";
+        @include circle(5px, #fff);
+    }
 }
