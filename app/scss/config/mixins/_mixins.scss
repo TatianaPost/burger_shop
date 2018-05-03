@@ -5,6 +5,13 @@
     background-color: $color;
 }
 
+@mixin absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 //responsive
 @function rem($px) {
     @return $px / 16px+0rem;

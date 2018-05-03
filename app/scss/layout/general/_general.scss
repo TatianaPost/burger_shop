@@ -2,7 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    // border: 1px solid #ff0000;
+    border: 1px solid #ff0000;
 }
 
 html,
@@ -52,24 +52,4 @@ a {
     content: '';
     display: block;
     clear: both;
-}
-
-.nav-sidebar {
-    position: fixed;
-    right: 7%;
-    top: 20%;
-}
-
-.nav-sidebar__item {
-    display: list-item;
-}
-
-.nav-sidebar__item__link {
-    cursor: pointer;
-    width: 5px;
-    height: 5px;
-    &::before {
-        content: " ";
-        @include circle(5px, #fff);
-    }
 }
