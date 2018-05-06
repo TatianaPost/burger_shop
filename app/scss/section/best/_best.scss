@@ -4,21 +4,36 @@
     text-align: center;
 }
 
+.best-container {
+    padding-top: 4%;
+}
 .section_title_best {
     color: $dark;
-    padding: 0;
-    margin-bottom: rem(60px);
+    flex: 1;
 }
 
 .best__blocks__list {
     display: flex;
     align-items: flex-start;
+    flex: 3;
 }
 
 .best__blocks__list__item {
     display: flex;
     flex-direction: column;
     flex: 1;
+    align-items: center;
+}
+
+.best__blocks__block-img {
+    width: 100px;
+    height: 100px;
+}
+
+.best__blocks__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .best__blocks__description__title {

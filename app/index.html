@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BURGER</title>
+  <link rel="shortcut icon" href="./img/icons/favicon/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
   <div class="wrapper">
     <div class="maincontent">
@@ -16,7 +19,7 @@
           <header class="header">
             <div class="header__logo">
               <a class="header__logo__link" href="#">
-                <img class="header__logo__link__img" src="./img/logo/logo.svg" alt="Logo"> Лучшие бургеры в питере
+                <img class="header__logo__link__img" src="./img/logo/logo.svg" alt="Logo">
               </a>
             </div>
             <div class="header__menu">
@@ -55,11 +58,9 @@
                 </ul>
               </nav>
             </div>
-            <div class="header__btn">
-              <a class="btn__link" href="#">
-                Заказать
-              </a>
-            </div>
+            <button class="btn__link" type="button">
+              Заказать
+            </button>
           </header>
           <main class="do__main">
             <div class="burger-image">
@@ -86,8 +87,8 @@
           </h2>
           <ul class="best__blocks__list">
             <li class="best__blocks__list__item">
-              <div class="best__blocks__img">
-                <img src="./img/best/icons/meat.png" alt="">
+              <div class="best__blocks__block-img">
+                <img class="best__blocks__img" src="./img/best/best-icons/best_meat.svg" alt="icon">
               </div>
               <div class="best__blocks__description">
                 <h4 class="best__blocks__description__title">100% свежее мясо</h4>
@@ -97,8 +98,8 @@
               </div>
             </li>
             <li class="best__blocks__list__item">
-              <div class="best__blocks__img">
-                <img src="./img/best/icons/hand.png" alt="">
+              <div class="best__blocks__block-img">
+                <img class="best__blocks__img" src="./img/best/best-icons/best_hand.svg" alt="icon">
               </div>
               <div class="best__blocks__description">
                 <h4 class="best__blocks__description__title">Ручная сборка</h4>
@@ -109,8 +110,8 @@
               </div>
             </li>
             <li class="best__blocks__list__item">
-              <div class="best__blocks__img">
-                <img src="./img/best/icons/natural.png" alt="">
+              <div class="best__blocks__block-img">
+                <img class="best__blocks__img" src="./img/best/best-icons/best_natural.svg" alt="icon">
               </div>
               <div class="best__blocks__description">
                 <h4 class="best__blocks__description__title">Натуральные ингредиенты</h4>
@@ -124,9 +125,130 @@
       </section>
       <section class="section burger">
         <div class="container burger-container">
-          <h2 class="section__title section_title_burger">
-            dark beef burger
-          </h2>
+
+          <div class="prev n">
+            <a href="" class="slider__btn slider_btn_prev">‹</a>
+          </div>
+
+          <main class="burger-slider">
+            <article class="burger__carousel current">
+              <div class="burger__main__left-side">
+
+                <div class="burger__main__left-side__block-img">
+                  <img class="burger__main__left-side__img" src="./img/burger/burgers/dark__burger.png" alt="Dark Burger">
+                </div>
+              </div>
+              <div class="burger__main__right-side">
+                <h2 class="section__title section_title_burger">
+                  dark beef burger
+                </h2>
+                <div class="burger__main__right-side__description">
+                  <p>
+                    Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                    луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                  </p>
+                  <span class="section__title section_title_burger_price">500</span>
+                  <button class="btn__link btn_link_burger" type="button">заказать</button>
+                </div>
+              </div>
+            </article>
+            <!-- <article class="burger__carousel">
+              <div class="burger__main__left-side">
+                <div class="burger__main__left-side__block-img">
+                  <img class="burger__main__left-side__img" src="./img/burger/burgers/dark__burger.png" alt="Dark Burger">
+                </div>
+              </div>
+              <div class="burger__main__right-side">
+                <h2 class="section__title section_title_burger">
+                  dark beef burger 2
+                </h2>
+                <div class="burger__main__right-side__description">
+                  <p>
+                    Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                    луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                  </p>
+                  <span class="section__title section_title_burger_price">200</span>
+                  <button class="btn__link btn_link_burger" type="button">заказать</button>
+                </div>
+              </div>
+            </article>
+            <article class="burger__carousel">
+              <div class="burger__main__left-side">
+                <div class="burger__main__left-side__block-img">
+                  <img class="burger__main__left-side__img" src="./img/burger/burgers/dark__burger.png" alt="Dark Burger">
+                </div>
+              </div>
+              <div class="burger__main__right-side">
+                <h2 class="section__title section_title_burger">
+                  dark beef burger 3
+                </h2>
+                <div class="burger__main__right-side__description">
+                  <p>
+                    Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                    луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                  </p>
+                  <span class="section__title section_title_burger_price">300</span>
+                  <button class="btn__link btn_link_burger" type="button">заказать</button>
+                </div>
+              </div>
+            </article>
+            <article class="burger__carousel">
+              <div class="burger__main__left-side">
+                <div class="burger__main__left-side__block-img">
+                  <img class="burger__main__left-side__img" src="./img/burger/burgers/dark__burger.png" alt="Dark Burger">
+                </div>
+              </div>
+              <div class="burger__main__right-side">
+                <h2 class="section__title section_title_burger">
+                  dark beef burger 4
+                </h2>
+                <div class="burger__main__right-side__description">
+                  <p>
+                    Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                    луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                  </p>
+                  <span class="section__title section_title_burger_price">400</span>
+                  <button class="btn__link btn_link_burger" type="button">заказать</button>
+                </div>
+              </div>
+            </article> -->
+
+            <div class="block__float-ingridients">
+              <img class="float-ingridients-main-img" src="./img/burger/food-icons/burger.svg" alt="hamburger">
+              <span class="float-ingridients-main-text">состав</span>
+              <div class="float-ingridients">
+                <ul class="float-ingridients__list">
+                  <li class="float-ingridients__item">
+                    <img class="ingridients__img" src="#" alt="icon">
+                    <span class="ingridients__text"></span>
+                  </li>
+                  <li class="float-ingridients__item">
+                    <img class="ingridients__img" src="#" alt="icon">
+                    <span class="ingridients__text"></span>
+                  </li>
+                  <li class="float-ingridients__item">
+                    <img class="ingridients__img" src="#" alt="icon">
+                    <span class="ingridients__text"></span>
+                  </li>
+                  <li class="float-ingridients__item">
+                    <img class="ingridients__img" src="#" alt="icon">
+                    <span class="ingridients__text"></span>
+                  </li>
+                  <li class="float-ingridients__item">
+                    <img class="ingridients__img" src="#" alt="icon">
+                    <span class="ingridients__text"></span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </main>
+
+          <div class="next n">
+            <a href="" class="next slider__btn slider_btn_next">›</a>
+          </div>
+
+
         </div>
       </section>
       <section class="section team">
@@ -306,4 +428,5 @@
 </body>
 <script src="./libs/jquery-3.3.1.min.js"></script>
 <script src="./js/app.min.js"></script>
+
 </html>

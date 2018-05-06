@@ -1,4 +1,108 @@
 .burger {
-    background: url('../img/burger/bg/') 50% 50% no-repeat;
-    background-size: cover;
+    background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+}
+
+.burger-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+// Carousel
+.burger-slider {
+    // width: 100%;
+    height: 70%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.slider__btn {
+    font-size: 72px;
+    color: $white;
+}
+
+.burger__carousel {
+    // width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: none;
+    &.current {
+        display: flex;
+    }
+}
+
+.burger__main__left-side {
+    width: 50%;
+    margin-right: rem(20px);
+}
+
+.burger__main__right-side {
+    width: 50%;
+}
+
+.burger__main__left-side__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section_title_burger {
+    color: $white;
+    line-height: 1em;
+}
+
+.burger__main__left-side__block-img {
+    width: 100%;
+    height: 100%;
+}
+
+.section_title_burger_price {
+    color: #e35028;
+    &::after {
+        content: "рублей";
+        display: inline-block;
+        font-size: rem(30px);
+        margin-left: rem(3px);
+    }
+}
+
+.btn_link_burger {
+    margin-left: rem(25px);
+}
+
+// End Carousel
+// block ingridients
+.block__float-ingridients {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    right: 0;
+    bottom: 0;
+    background: rgba(227, 80, 40, 0.4);
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 0.3125rem;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+// .float-ingridients-main-img {
+//     margin-top: 10px;
+// }
+.float-ingridients-main-text {
+    font-family: 'Gagalin', Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+.float-ingridients {
+    display: none;
 }

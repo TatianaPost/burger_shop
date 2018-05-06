@@ -18,6 +18,12 @@
     overflow: hidden;
 }
 
+.header__logo__link__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .header__menu {
     display: block;
     margin-left: auto;
@@ -40,9 +46,8 @@
         display: inline-block;
         vertical-align: middle;
         content: " ";
-        @include circle(5px,
-        #fff);
-        margin: 0 12px;
+        @include circle(rem(5px), #fff);
+        margin: 0 rem(12px);
     }
     &:last-child:after {
         display: none;
@@ -59,7 +64,8 @@
 .do__main {
     width: 100%;
     display: flex;
-    margin-bottom: 70px;
+    justify-content: center;
+    align-content: center;
 }
 
 .burger-image {
@@ -67,7 +73,7 @@
 }
 
 .do__description {
-    padding-top: 65px;
+    padding-top: rem(65px);
 }
 
 .section__title {
