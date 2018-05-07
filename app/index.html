@@ -470,6 +470,96 @@
           <h2 class="section__title section_title_order">
             закажите доставку
           </h2>
+          <form class="form" name="food-order">
+            <div class="form__left-side">
+
+              <div class="form__row">
+
+                <label class="form__label">
+                  <div class="form__title">имя</div>
+                  <input class="form__input" type="text">
+                </label>
+
+                <label class="form__label">
+                  <div class="form__title">телефон</div>
+                  <input class="form__input" type="text">
+                </label>
+
+              </div>
+              <div class="form__row">
+
+                <label class="form__label">
+                  <div class="form__title">улица</div>
+                  <input class="form__input" type="text">
+                </label>
+
+              </div>
+              <div class="form__row">
+
+                <label class="form__label">
+                  <div class="form__title">дом</div>
+                  <input class="form__input" type="text">
+                </label>
+
+                <label class="form__label">
+                  <div class="form__title">корпус</div>
+                  <input class="form__input" type="text">
+                </label>
+
+                <label class="form__label">
+                  <div class="form__title">квартира</div>
+                  <input class="form__input" type="text">
+                </label>
+
+                <label class="form__label">
+                  <div class="form__title">этаж</div>
+                  <input class="form__input" type="text">
+                </label>
+
+              </div>
+            </div>
+            <div class="form__right-side">
+              <div class="form__row">
+
+                <label class="form__label">
+                  <div class="form__title">комментарий</div>
+                  <textarea class="form__input__textarea"></textarea>
+                </label>
+                
+              </div>
+              <div class="form__row">
+
+                <label class="form__label-radio">
+                  <input class="form__input__radio" name="order" type="radio">
+                  <div class="form__input__radio-fake"></div>
+                  <span class="form__title">потребуется сдача</span>
+                </label>
+
+                <label class="form__label-radio">
+                  <input class="form__input__radio" name="order" type="radio" checked>
+                  <div class="form__input__radio-fake"></div>
+                  <span class="form__title">оплата по карте</span>
+                </label>
+
+              </div>
+              <div class="form__row">
+              
+                <label class="form__label-checkbox">
+                  <input class="form__input__checkbox" name="nocall" type="checkbox">
+                  <div class="form__input__checkbox-fake"></div>
+                  <span class="form__title">не перезванивать</span>
+                </label>
+              
+              </div>
+              <div class="form__row">
+              
+                <input class="btn__link" type="submit" value="заказать">
+                <input class="btn__link form__button__reset" type="reset" value="очистить">
+              
+              </div>
+
+            </div>
+          </form>
         </div>
       </section>
       <section class="section map">

@@ -14,7 +14,7 @@
 }
 
 .team__accordeon__item {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
 
 .team_accordeon_item_active .team__accordeon__link {
@@ -25,7 +25,7 @@
 }
 
 .team_accordeon_item_active .team__accordeon__description {
-    display: block;
+    display: flex;
 }
 
 .team__accordeon__link {
@@ -35,7 +35,8 @@
     color: $white;
     text-transform: uppercase;
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
     transition: 0.4s;
     &:hover {
         color: $yellow;
@@ -43,7 +44,7 @@
     &::before {
         content: "";
         display: inline-block;
-        margin: 0 15px;
+        margin: 0 rem(15px);
         vertical-align: middle;
         border-top: rem(5px) solid $yellow;
         border-left: rem(5px) solid transparent;
@@ -55,25 +56,28 @@
 }
 
 .team__accordeon__description {
-    padding: 3px 0;
+    padding: rem(3px) 0;
     display: none;
 }
 
 .team__accordeon__description__photo {
-    float: left;
-    height: 100%;
-    margin-right: 20px;
+    display: block;
+    margin-right: rem(20px);
 }
 
 .team__accordeon__description__img {
     border-radius: 50%;
     display: block;
-    width: 80px;
-    height: 80px;
+    width: rem(80px);
+    height: rem(80px);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
-// .team__accordeon__description__text {
-// }
+.team__accordeon__description__text__title {
+    font-weight: 600;
+}
+.team__accordeon__description__text__about {
+    font-weight: 300;
+}
