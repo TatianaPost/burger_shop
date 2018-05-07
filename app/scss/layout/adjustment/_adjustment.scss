@@ -33,12 +33,22 @@
     align-content: center;
 }
 
+.section__title {
+    font-family: "Gagalin", cursive;
+    color: $yellow;
+    font-size: rem(72px);
+    font-weight: 400;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
 .btn__link {
     display: inline-block;
     min-width: rem(98px);
     padding: rem(10px) rem(15px);
     border-radius: 5px;
     background-color: $orange;
+    border-color: $orange;
     color: #fff;
     font-size: rem(13px);
     font-weight: 500;
@@ -46,6 +56,7 @@
     transition: 0.4s;
     &:hover {
         background-color: darken($orange, 8%);
+        border-color: darken($orange, 8%);
     }
 }
 
