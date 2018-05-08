@@ -1,0 +1,17 @@
+.footer {
+    background: url("../img/footer/bg/bg__footer.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: rem(10px) 0;
+}
+
+.container_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

@@ -50,13 +50,13 @@
 
 .form__input {
     width: 100%;
+    height: 35px;
     border: none;
-    border-radius: 5px;
-    padding: rem(8px) rem(20px);
+    border-radius: 5px; // padding: rem(8px) rem(20px);
     margin-top: rem(5px);
 }
 
-.form__input__textarea {
+.form__textarea {
     width: 100%;
     height: rem(105px);
     resize: none;
@@ -74,6 +74,7 @@
 
 .form__input__radio:checked+.form__input__radio-fake::after {
     opacity: 1;
+    height: 8px;
 }
 
 .form__input__radio-fake {
@@ -81,22 +82,27 @@
     vertical-align: middle;
     display: inline-block;
     position: relative;
-    @include circle(rem(15px),
+    @include circle(rem(16px),
     $white);
     &::after {
         content: '';
         position: absolute;
-        top: 3px;
-        left: 3px;
-        @include circle(rem(7px),
+        top: 4px;
+        left: 4px;
+        @include circle(rem(8px),
         $orange);
         transition: .3s;
         opacity: 0;
+        height: 0;
     }
 }
 
 .form__input__checkbox {
     display: none;
+}
+
+.form__label-checkbox:last-child {
+    margin-left: rem(27px);
 }
 
 .form__input__checkbox:checked+.form__input__checkbox-fake::after {
@@ -108,8 +114,8 @@
     margin-right: rem(7px);
     display: inline-block;
     background-color: $white;
-    width: rem(18px);
-    height: rem(18px);
+    width: rem(16px);
+    height: rem(16px);
     position: relative;
     &::after {
         content: '√';
@@ -129,5 +135,6 @@
     &:hover {
         background-color: transparent;
         border-color: transparent;
+        color: #b3b3b3;
     }
 }

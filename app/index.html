@@ -477,12 +477,12 @@
 
                 <label class="form__label">
                   <div class="form__title">имя</div>
-                  <input class="form__input" type="text">
+                  <input class="form__input" name="name" type="text" placeholder="Mr. Burger" title="Введите Ваше имя">
                 </label>
 
                 <label class="form__label">
                   <div class="form__title">телефон</div>
-                  <input class="form__input" type="text">
+                  <input class="form__input" name="phone" type="text" placeholder="+7(812)377-13-77" title="Введите номер для связи">
                 </label>
 
               </div>
@@ -490,7 +490,7 @@
 
                 <label class="form__label">
                   <div class="form__title">улица</div>
-                  <input class="form__input" type="text">
+                  <input class="form__input" name="street" type="text" placeholder="Бабушкина" min="2" title="Укажите улицу">
                 </label>
 
               </div>
@@ -498,22 +498,27 @@
 
                 <label class="form__label">
                   <div class="form__title">дом</div>
-                  <input class="form__input" type="text">
+                  <input class="form__input" name="house" type="text" placeholder="12/1" min="1" title="Укажите номер дома">
                 </label>
 
                 <label class="form__label">
                   <div class="form__title">корпус</div>
-                  <input class="form__input" type="text">
+                  <input class="form__input" name="house-entrance" type="text" placeholder="15" title="Укажите корпус">
+                </label>
+
+                <label class="form__label">
+                  <div class="form__title">подъезд</div>
+                  <input class="form__input" name="entrance" type="text" placeholder="1" title="Укажите подъезд">
+                </label>
+                
+                <label class="form__label">
+                  <div class="form__title">этаж</div>
+                  <input class="form__input" name="floor" type="text" placeholder="3" title="Укажите этаж">
                 </label>
 
                 <label class="form__label">
                   <div class="form__title">квартира</div>
-                  <input class="form__input" type="text">
-                </label>
-
-                <label class="form__label">
-                  <div class="form__title">этаж</div>
-                  <input class="form__input" type="text">
+                  <input class="form__input" name="apartment" type="text" placeholder="57" title="Укажите номер квартиры">
                 </label>
 
               </div>
@@ -523,20 +528,20 @@
 
                 <label class="form__label">
                   <div class="form__title">комментарий</div>
-                  <textarea class="form__input__textarea"></textarea>
+                  <textarea class="form__textarea" name="comment" placeholder="Пожелания к заказу" title="Напишите свои пожелания к заказу"></textarea>
                 </label>
                 
               </div>
               <div class="form__row">
 
                 <label class="form__label-radio">
-                  <input class="form__input__radio" name="order" type="radio">
+                  <input class="form__input__radio" name="order" type="radio" checked>
                   <div class="form__input__radio-fake"></div>
-                  <span class="form__title">потребуется сдача</span>
+                  <span class="form__title">оплата наличными</span>
                 </label>
 
                 <label class="form__label-radio">
-                  <input class="form__input__radio" name="order" type="radio" checked>
+                  <input class="form__input__radio" name="order" type="radio">
                   <div class="form__input__radio-fake"></div>
                   <span class="form__title">оплата по карте</span>
                 </label>
@@ -547,7 +552,13 @@
                 <label class="form__label-checkbox">
                   <input class="form__input__checkbox" name="nocall" type="checkbox">
                   <div class="form__input__checkbox-fake"></div>
-                  <span class="form__title">не перезванивать</span>
+                  <span class="form__title" title="Не перезванивать для подтверждения заказа">не перезванивать</span>
+                </label>
+              
+                <label class="form__label-checkbox">
+                  <input class="form__input__checkbox" name="nocall" type="checkbox">
+                  <div class="form__input__checkbox-fake"></div>
+                  <span class="form__title">потребуется сдача</span>
                 </label>
               
               </div>
@@ -563,12 +574,12 @@
         </div>
       </section>
       <section class="section map">
-        <div class="container map-container">
-          <h2 class="section__title section_title_map">
-            map
-          </h2>
-        </div>
-        <footer class="footer"></footer>
+        <div class="map__block"></div>
+        <footer class="footer">
+          <div class="container container_footer">
+
+          </div>
+        </footer>
       </section>
     </div>
   </div>
