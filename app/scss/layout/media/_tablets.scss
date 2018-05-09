@@ -1,0 +1,33 @@
+@media (max-width: $tablets) {
+    .container {
+        width: 480px;
+    }
+    .do__description {
+        padding-top: rem(20px);
+    }
+    .section__title {
+        font-size: rem(38px);
+    }
+    .nav {
+        margin-left: rem(32px);
+    }
+    .nav__item:nth-child(3)::after {
+        display: none;
+    }
+    .best__blocks__img {
+        width: 70%;
+        height: 70%;
+    }
+    .best__blocks__description {
+        width: 100%;
+    }
+    .menu_accordeon_item_active .menu__accordeon__link__content {
+        width: 14.375rem;
+    }
+    .reviews__item {
+        width: 33.3%;
+    }
+    .form {
+        flex-wrap: wrap;
+    }
+}
