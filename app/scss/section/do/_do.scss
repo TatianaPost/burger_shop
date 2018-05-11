@@ -10,6 +10,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include tablets {
+        justify-content: space-between;
+    }
 }
 
 .header__logo {
@@ -27,6 +30,9 @@
 .header__menu {
     display: block;
     margin-left: auto;
+    @include tablets {
+        display: none;
+    }
 }
 
 .nav {
@@ -63,26 +69,48 @@
 }
 
 .do__main {
+    height: 50%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-content: center;
+    @include tablets {
+        flex: 1;
+        justify-content: center;
+        width: 70%;
+        flex-direction: column;
+        align-content: center;
+    }
 }
 
 .burger-image {
     width: 50%;
     margin-right: rem(25px);
+    @include tablets {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
 }
 
 .burger-image__img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    @include tablets {
+        width: 80%;
+        height: 80%;
+    }
 }
 
 .do__description {
     width: 50%;
     padding-top: rem(65px);
+    @include tablets {
+        padding-top: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .do__description-text {
@@ -92,8 +120,14 @@
     font-family: "LifeHack";
     font-size: rem(65px);
     line-height: 1;
+    @include tablets {
+        font-size: rem(52px);
+    }
 }
 
 .main__arrow-down {
     margin: 0 auto;
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
 }

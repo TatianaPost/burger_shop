@@ -6,17 +6,28 @@
 
 .best-container {
     padding-top: 4%;
+    @include tablets {
+        padding-top: 0;
+    }
 }
 
 .section_title_best {
     color: $dark;
     flex: 1;
+    @include tablets {
+        font-size: rem(62px);
+        margin-bottom: 6%;
+        flex: none;
+    }
 }
 
 .best__blocks__list {
     display: flex;
     align-items: flex-start;
     flex: 3;
+    @include tablets {
+        flex: none;
+    }
 }
 
 .best__blocks__list__item {
@@ -35,6 +46,10 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    @include tablets {
+        width: 80%;
+        height: 80%;
+    }
 }
 
 .best__blocks__description {
@@ -46,6 +61,10 @@
     font-weight: 500;
     font-size: rem(24px);
     color: $dark;
+    @include tablets {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 .best__blocks__description__text {

@@ -1,6 +1,11 @@
 // config
 @import "./config/variables/_variables";
 @import "./config/mixins/_mixins";
+// media
+// @import "./layout/media/_desktop";
+// @import "./layout/media/_laptop";
+// @import "./layout/media/_tablets";
+// @import "./layout/media/_smartphones";
 // layout
 @import "./layout/fonts/_fonts";
 @import "./layout/general/_general";
@@ -15,8 +20,3 @@
 @import "./section/order/_order";
 @import "./section/map/_map";
 @import "./section/footer/_footer";
-// media
-@import "./layout/media/_desktop";
-@import "./layout/media/_laptop";
-@import "./layout/media/_tablets";
-@import "./layout/media/_smartphones";

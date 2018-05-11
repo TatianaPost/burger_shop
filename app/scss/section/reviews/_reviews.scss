@@ -8,6 +8,10 @@
 .reviews__item {
     width: 25%;
     height: 50%;
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
 }
 
 .review {
@@ -53,6 +57,10 @@
     &:hover {
         opacity: 1;
     }
+    @include tablets {
+        height: 157%;
+        text-align: center;
+    }
 }
 
 .review__name {
@@ -61,6 +69,9 @@
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: rem(16px);
+    @include tablets {
+        margin-bottom: rem(10px);
+    }
 }
 
 .review__text {

@@ -14,6 +14,9 @@
 .form {
     width: 100%;
     display: flex;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .form__left-side {
@@ -22,6 +25,10 @@
     display: flex;
     flex-direction: column;
     margin-right: rem(20px);
+    @include tablets {
+        margin: 0 auto;
+        width: 65%;
+    }
 }
 
 .form__right-side {
@@ -29,6 +36,10 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    @include tablets {
+        margin: 0 auto;
+        width: 65%;
+    }
 }
 
 .form__row {

@@ -11,10 +11,34 @@
     left: 50%;
     background: rgba(47, 50, 52, 0.93);
     padding: 5% 2% 0 7%;
+    @include tablets {
+        left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+.team__accordeon__list {
+    @include tablets {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
 }
 
 .team__accordeon__item {
     margin-bottom: rem(20px);
+    @include tablets {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
 }
 
 .team_accordeon_item_active .team__accordeon__link {
@@ -26,6 +50,13 @@
 
 .team_accordeon_item_active .team__accordeon__description {
     display: flex;
+    @include tablets {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .team__accordeon__link {
@@ -38,6 +69,9 @@
     display: flex;
     align-items: center;
     transition: 0.4s;
+    @include tablets {
+        width: 40%;
+    }
     &:hover {
         color: $yellow;
     }
@@ -52,17 +86,26 @@
         border-bottom: 0px solid transparent;
         transform: rotate(0deg);
         transition: .4s;
+        @include tablets {
+            margin-left: 0;
+        }
     }
 }
 
 .team__accordeon__description {
     padding: rem(3px) 0;
     display: none;
+    @include tablets {
+        text-align: center;
+    }
 }
 
 .team__accordeon__description__photo {
     display: block;
     margin-right: rem(20px);
+    @include tablets {
+        margin-right: 0;
+    }
 }
 
 .team__accordeon__description__img {
@@ -78,7 +121,12 @@
 .team__accordeon__description__text__title {
     font-weight: 600;
 }
+
 .team__accordeon__description__text__about {
     font-weight: 300;
     width: 80%;
+    @include tablets {
+        width: 75%;
+        margin: 0 auto;
+    }
 }
