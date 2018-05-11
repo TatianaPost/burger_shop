@@ -58,8 +58,10 @@
         opacity: 1;
     }
     @include tablets {
-        height: 157%;
+        height: 100%;
         text-align: center;
+        overflow: scroll;
+        padding: 3% 10%;
     }
 }
 

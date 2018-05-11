@@ -31,6 +31,9 @@
     justify-content: space-around;
     align-items: center;
     align-content: center;
+    @include desktop {
+        max-width: $desktop;
+    }
     @include tablets {
         justify-content: center;
     }
