@@ -25,6 +25,9 @@
 
 .menu_accordeon_item_active .menu__accordeon__link__content {
     width: rem(550px);
+    @include phones {
+        width: rem(250px);
+    }
 }
 
 .menu_accordeon_item_active .menu__accordeon__link__title {

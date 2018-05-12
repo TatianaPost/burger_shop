@@ -16,6 +16,9 @@
 @function rem($px) {
     @return $px / 16px+0rem;
 }
+// @function procent($px, $%) {
+//     @return $px / $px * 100%+0%;
+// }
 
 //mobile mixin
 @mixin desktop {
