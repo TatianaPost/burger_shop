@@ -19,6 +19,9 @@
 
 .footer__left-side {
     width: 50%;
+    @include phones {
+        padding-left: rem(10px);
+    }
 }
 
 .footer__left-side__address {
@@ -33,6 +36,9 @@
 
 .footer__right-side {
     width: 50%;
+    @include phones {
+        padding: 0 rem(20px);
+    }
 }
 
 .socials__list {

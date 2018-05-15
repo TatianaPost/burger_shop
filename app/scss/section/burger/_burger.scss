@@ -153,7 +153,10 @@
 
 .float-ingridients-main-text {
     font-family: 'Gagalin', Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: rem(12px);
+    @include phones {
+        font-size: 10px;
+    }
 }
 
 .float-ingridients__list {
@@ -173,6 +176,12 @@
     margin-left: 90px;
     color: #000;
     overflow: hidden;
+    @include phones {
+        width: rem(200px);
+        height: rem(250px);
+        text-align: left;
+        overflow: scroll;
+    }
 }
 
 .float-ingridients__item {
@@ -195,13 +204,18 @@
     width: 5.625rem;
     height: 5.625rem;
     text-align: center;
+    @include phones {
+        top: 30%;
+        width: 5rem;
+        height: 5rem;
+    }
     &::before {
         display: block;
         content: '1200';
         position: absolute;
         font-family: 'Gagalin', Arial, Helvetica, sans-serif;
-        font-size: 18px;
-        top: 30%;
+        font-size: 16px;
+        top: 15%;
         left: 0;
         right: 0;
         bottom: 0;

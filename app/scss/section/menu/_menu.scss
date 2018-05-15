@@ -35,6 +35,7 @@
 }
 
 .menu__accordeon__link {
+    opacity: 0.93;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -72,6 +73,9 @@
     float: left;
     background: rgba(47, 50, 52, 0.93);
     overflow: hidden;
+    @include phones {
+        overflow: scroll;
+    }
 }
 
 .menu__accordeon__link__content__text {
