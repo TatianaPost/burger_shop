@@ -134,11 +134,11 @@
 
 // hamburger sidebar
 .nav-sidebar__mobile {
+    display: none;
     width: 32px;
     position: fixed;
     top: 4%;
     right: 5%;
-    display: none;
     @include tablets {
         display: block;
         top: 2%;
