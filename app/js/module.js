@@ -14,6 +14,3 @@ btn__close.addEventListener('click', function(e) {
 
 // section team
 
-const sidebar__mobile = document.querySelector('.menu__accordeon__item');
-const transfer__menu = document.querySelector('.mobile__transfer__menu');
-const btn__close = document.querySelector('.btn__close');
