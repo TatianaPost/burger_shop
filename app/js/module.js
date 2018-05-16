@@ -1,4 +1,4 @@
-// section do
+// section --do--
 const sidebar__mobile = document.querySelector('.nav-sidebar__mobile');
 const transfer__menu = document.querySelector('.mobile__transfer__menu');
 const btn__close = document.querySelector('.btn__close');
@@ -12,5 +12,7 @@ btn__close.addEventListener('click', function(e) {
   transfer__menu.style.display = 'none';
 });
 
-// section team
+// section --burger--
 
+const btn__prev = document.querySelector('.btn__prev');
+const btn__next = document.querySelector('.btn__next');
