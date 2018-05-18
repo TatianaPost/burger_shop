@@ -30,7 +30,7 @@
         width: 65%;
     }
     @include phones {
-        width: 90%;
+        width: 95%;
         overflow: hidden;
     }
 }
@@ -45,7 +45,7 @@
         width: 65%;
     }
     @include phones {
-        width: 90%;
+        width: 95%;
     }
 }
 
@@ -80,6 +80,9 @@
     resize: none;
     border: none;
     border-radius: 5px;
+    @include phones {
+        height: rem(65px);
+    }
 }
 
 .form__label-radio:last-child {
@@ -121,6 +124,9 @@
 
 .form__label-checkbox:last-child {
     margin-left: rem(27px);
+    @include phones {
+        margin-left: rem(37px);
+    }
 }
 
 .form__input__checkbox:checked+.form__input__checkbox-fake::after {

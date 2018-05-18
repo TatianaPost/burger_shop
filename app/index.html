@@ -138,6 +138,7 @@
                   <span class="float-ingridients-main-text">состав</span>
                 </div>
                   <ul class="float-ingridients__list">
+                    <div class="btn__close">X</div>
                     <li class="float-ingridients__item">
                       <img class="ingridients__img" src="./img/burger/food-icons/beef.svg" alt="icon">
                       <span class="ingridients__text"> Говядина</span>
@@ -185,7 +186,7 @@
                 </div>
               </div>
             </article>
-            
+
             <article class="burger__carousel">
               <div class="burger__main__left-side">
                 <div class="block__float-ingridients">
@@ -471,7 +472,7 @@
         <ul class="reviews__list">
           <li class="reviews__item">
             <div class="review">
-              <div class="review__photo" style="background-image: url(./img/reviews/people/people1.jpg);"></div>
+              <div class="review__photo" style="background-image: url(./img/reviews/people/photo_1.jpg);"></div>
               <div class="review__block-text">
                 <div class="review__name">Константин Спилберг</div>
                 <div class="review__text">
@@ -484,7 +485,7 @@
           </li>
           <li class="reviews__item">
             <div class="review">
-              <div class="review__photo" style="background-image: url(./img/reviews/people/people2.jpg);"></div>
+              <div class="review__photo" style="background-image: url(./img/reviews/people/photo_2.jpg);"></div>
               <div class="review__block-text">
                 <div class="review__name">Константин Спилберг</div>
                 <div class="review__text">
@@ -497,7 +498,7 @@
           </li>
           <li class="reviews__item">
             <div class="review">
-              <div class="review__photo" style="background-image: url(./img/reviews/people/people3.jpg);"></div>
+              <div class="review__photo" style="background-image: url(./img/reviews/people/photo_3.jpg);"></div>
               <div class="review__block-text">
                 <div class="review__name">Константин Спилберг</div>
                 <div class="review__text">
@@ -510,7 +511,7 @@
           </li>
           <li class="reviews__item">
             <div class="review">
-              <div class="review__photo" style="background-image: url(./img/reviews/people/people4.jpg);"></div>
+              <div class="review__photo" style="background-image: url(./img/reviews/people/photo_4.jpg);"></div>
               <div class="review__block-text">
                 <div class="review__name">Константин Спилберг</div>
                 <div class="review__text">
@@ -523,7 +524,7 @@
           </li>
           <li class="reviews__item">
             <div class="review">
-              <div class="review__photo" style="background-image: url(./img/reviews/people/people5.jpg);"></div>
+              <div class="review__photo" style="background-image: url(./img/reviews/people/photo_5.jpg);"></div>
               <div class="review__block-text">
                 <div class="review__name">Константин Спилберг</div>
                 <div class="review__text">
@@ -536,7 +537,7 @@
           </li>
           <li class="reviews__item">
             <div class="review">
-              <div class="review__photo" style="background-image: url(./img/reviews/people/people6.jpg);"></div>
+              <div class="review__photo" style="background-image: url(./img/reviews/people/photo_6.jpg);"></div>
               <div class="review__block-text">
                 <div class="review__name">Константин Спилберг</div>
                 <div class="review__text">
@@ -549,7 +550,7 @@
           </li>
           <li class="reviews__item">
             <div class="review">
-              <div class="review__photo" style="background-image: url('./img/reviews/people/people7.jpg');"></div>
+              <div class="review__photo" style="background-image: url('./img/reviews/people/photo_7.jpg');"></div>
               <div class="review__block-text">
                 <div class="review__name">Константин Спилберг</div>
                 <div class="review__text">
@@ -562,7 +563,7 @@
           </li>
           <li class="reviews__item">
             <div class="review">
-              <div class="review__photo" style="background-image: url(./img/reviews/people/people8.jpg);"></div>
+              <div class="review__photo" style="background-image: url(./img/reviews/people/photo_8.jpg);"></div>
               <div class="review__block-text">
                 <div class="review__name">Константин Спилберг</div>
                 <div class="review__text">
@@ -736,7 +737,7 @@
         <li class="mobile__item">
           <a class="mobile__item__link">
             <svg class="menu-icons">
-              <use xlink:href="./img/icons/menu-icons/tab_menu.svg#tabs"></use>
+              <use xlink:href="./img/icons/menu-icons/tab_menu.svg#tab"></use>
             </svg>
           </a>
         </li>
@@ -787,6 +788,52 @@
       </ul>
     </nav>
   </div>
+  <!-- <script type="template" id="overlayTemplate">
+  <div class="mobile__transfer__menu">
+      <div class="btn__close">
+        <img src="./img/icons/menu-icons/close__button.svg" alt="close button">
+    </div>
+        <div class="header__logo transfer_logo">
+          <a class="header__logo__link" href="#">
+            <img class="header__logo__link__img" src="./img/logo/logo.svg" alt="Logo">
+      </a>
+    </div>
+          <nav class="transfer__menu">
+            <ul class="transfer__list">
+              <li class="transfer__items">
+                <a class="nav__item__link transfer_item_link" href="#">
+                  о нас
+          </a>
+              </li>
+              <li class="transfer__items">
+                <a class="nav__item__link transfer_item_link" href="#">
+                  бургеры
+          </a>
+              </li>
+              <li class="transfer__items">
+                <a class="nav__item__link transfer_item_link" href="#">
+                  команда
+          </a>
+              </li>
+              <li class="transfer__items">
+                <a class="nav__item__link transfer_item_link" href="#">
+                  меню
+          </a>
+              </li>
+              <li class="transfer__items">
+                <a class="nav__item__link transfer_item_link" href="#">
+                  отзывы
+          </a>
+              </li>
+              <li class="transfer__items">
+                <a class="nav__item__link transfer_item_link" href="#">
+                  контакты
+          </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+  </script> -->
   <aside class="nav-sidebar">
     <nav class="nav-sidebar__nav">
       <ul class="nav-sidebar__list">

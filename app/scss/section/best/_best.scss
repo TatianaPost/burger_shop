@@ -43,14 +43,18 @@
     flex-direction: column;
     flex: 1;
     align-items: center;
+    @include phones {
+        flex-direction: row;
+        padding: 2px;
+    }
 }
 
 .best__blocks__block-img {
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
     @include phones {
-        width: 70px;
-        height: 70px;
+        width: rem(70px);
+        height: rem(70px);
     }
 }
 
@@ -78,7 +82,7 @@
         margin-bottom: 0;
     }
     @include phones {
-        font-size: rem(16px);
+        font-size: rem(18px);
     }
 }
 

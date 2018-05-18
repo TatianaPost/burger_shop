@@ -15,10 +15,6 @@
         width: 50%;
         height: 25%;
     }
-    @include phones {
-        width: 100%;
-        height: 25%;
-    }
 }
 
 .review {
@@ -69,6 +65,7 @@
         text-align: center;
         overflow: scroll;
         padding: 3% 10%;
+        line-height: 1.8;
     }
 }
 
@@ -87,6 +84,9 @@
     font-weight: 300;
     font-style: normal;
     margin-bottom: rem(14px);
+    @include phones {
+        display: none;
+    }
 }
 
 .review__btn__link {
