@@ -129,13 +129,27 @@
     bottom: 0;
     background: rgba(227, 80, 40, 0.4);
     width: 5.625rem;
+    width: 5.625rem;
     height: 5.625rem;
     border-radius: 0.3125rem;
     padding: 13px 23px;
     display: flex;
-    flex-direction: column; // &:hover+.float-ingridients__list {
-    //     left: 0px;
-    // }
+    flex-direction: column;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.ingridients__btn__close {
+    position: absolute;
+    width: rem(30px);
+    height: rem(30px);
+    right: 5%;
+    top: 4%;
+    font-size: rem(20px);
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
 }
 
 .float-ingridients-main-img {
