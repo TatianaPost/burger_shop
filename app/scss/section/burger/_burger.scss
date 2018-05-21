@@ -16,9 +16,12 @@
     overflow: hidden;
     margin: 0 rem(10px);
     @include tablets {
-        height: 100%;
+        height: 70%;
         align-content: center;
         justify-content: center;
+    }
+    @include phones {
+        height: 100%;
     }
 }
 
@@ -48,7 +51,6 @@
     position: relative;
     width: 50%;
     height: 100%;
-    margin-right: rem(20px);
     @include tablets {
         height: 50%;
         width: 100%;
@@ -121,22 +123,66 @@
 
 // End Carousel
 // block ingridients
-.block__float-ingridients {
+.ingridients {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.block__float-ingridients {
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: rgba(227, 80, 40, 0.4);
     width: 5.625rem;
-    width: 5.625rem;
     height: 5.625rem;
     border-radius: 0.3125rem;
-    padding: 13px 23px;
+    padding: rem(13px) rem(23px);
     display: flex;
     flex-direction: column;
+    z-index: 1;
     &:hover {
         cursor: pointer;
+    }
+    @include phones {
+        top: 10%;
+        width: 4.625rem;
+        height: 4.625rem;
+        padding: rem(3px) rem(13px);
+    }
+}
+
+.float-ingridients__list {
+    opacity: 0;
+    transition: opacity .3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // left: -9999px;
+    left: 100%;
+    bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    background: #fff;
+    border-radius: 0.3125rem;
+    width: rem(300px);
+    height: rem(350px);
+    padding: rem(10px) rem(5px) 0 rem(20px);
+    color: #000;
+    overflow: hidden;
+    z-index: 3;
+    text-align: left;
+    transition: opacity .3s;
+    @include phones {
+        margin-left: rem(75px);
+        top: 10%;
+        width: rem(200px);
+        height: rem(250px);
+        overflow: scroll;
     }
 }
 
@@ -161,33 +207,9 @@
 .float-ingridients-main-text {
     font-family: 'Gagalin', Arial, Helvetica, sans-serif;
     font-size: rem(12px);
+    text-align: center;
     @include phones {
-        font-size: 10px;
-    }
-}
-
-.float-ingridients__list {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: -9999px;
-    bottom: 0;
-    display: flex;
-    flex-flow: column nowrap;
-    background: #fff;
-    border-radius: 0.3125rem;
-    width: rem(300px);
-    height: rem(350px);
-    padding: 10px 5px 0 20px;
-    margin-left: 90px;
-    color: #000;
-    overflow: hidden;
-    z-index: 3;
-    text-align: left;
-    @include phones {
-        width: rem(200px);
-        height: rem(250px);
-        overflow: scroll;
+        font-size: rem(10px);
     }
 }
 
@@ -216,6 +238,7 @@
     width: 5.625rem;
     height: 5.625rem;
     text-align: center;
+    z-index: 1;
     @include tablets {
         top: 0;
         left: initial;
@@ -223,8 +246,8 @@
         bottom: 0;
     }
     @include phones {
-        // width: 5rem;
-        // height: 5rem;
+        top: 9.5%;
+        padding: 3px 13px;
     }
     &::before {
         display: block;
@@ -237,5 +260,8 @@
         left: 0;
         right: 0;
         bottom: 0;
+        @include phones {
+            font-size: 12px;
+        }
     }
 }

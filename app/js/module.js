@@ -22,8 +22,8 @@ for (let i = 0; i < menu__link.length; i++) {
   link.addEventListener ('click', function (e) {
     e.preventDefault();
     console.log(link[i]);
-    sidebar__mobile.style.display = 'flex';
-    transfer__menu.style.display = 'none';
+    transfer__menu.style.left = '-9999px';
+    transfer__menu.style.opacity = '0';
   });
 };
 // cycle of --close btn-- sections do, burger -- have a bug
@@ -52,17 +52,22 @@ for (let i = 0; i < team__item.length; i++) {
 // --pop up-- Event
 sidebar__mobile.addEventListener('click', function (event) {
   event.preventDefault();
-  transfer__menu.style.display = 'flex';
+  transfer__menu.style.left = '0px';
+  transfer__menu.style.opacity = '1';
 });
 btn__close.addEventListener('click', function (e) {
-    transfer__menu.style.display = 'none';
+  transfer__menu.style.left = '-9999px';
+  transfer__menu.style.opacity = '0';
 });
 // ingridients Event
 btnIngridients.addEventListener('click', function (e) {
-  floatIngridients.style.left = '0';
+  floatIngridients.style.opacity = '1';
+  // floatIngridients.style.left = '100%';
 });
 ingridients__btn__close.addEventListener('click', function (e) {
-  floatIngridients.style.left = '-9999px';
+  // debugger;
+  floatIngridients.style.opacity = '0';
+  // floatIngridients.style.left = '-9999px';
 });
 // example pop up two --isn't work--
 // const sidebar__mobile = document.querySelector('.nav-sidebar__mobile');
@@ -91,6 +96,43 @@ ingridients__btn__close.addEventListener('click', function (e) {
 // };
 
 // section --burger--
+
+
+// --Form--
+
+const form = document.querySelector('#form');
+const sendButton = document.querySelector('#sendButton');
+
+sendButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  var objFormNameText = [form.elements.name, form.elements.phone, form.elements.street,
+    form.elements.house, form.elements.houseEntr, form.elements.entrance, form.elements.floor, 
+    form.elements.apartment];
+  if (objFormNameText[0]) {
+    console.log(form.elements.name.value);
+  }
+  if (objFormNameText[1]) {
+    console.log(form.elements.phone.value);
+  }
+  if (objFormNameText[2]) {
+    console.log(form.elements.street.value);
+  }
+  if (objFormNameText[3]) {
+    console.log(form.elements.house.value);
+  }
+  if (objFormNameText[4]) {
+    console.log(form.elements.houseEntr.value);
+  }
+  if (objFormNameText[5]) {
+    console.log(form.elements.entrance.value);
+  }
+  if (objFormNameText[6]) {
+    console.log(form.elements.floor.value);
+  }
+  if (objFormNameText[7]) {
+    console.log(form.elements.apartment.value);
+  }
+});
 
 
 
