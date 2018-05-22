@@ -76,6 +76,7 @@
     text-transform: uppercase;
     margin-bottom: rem(16px);
     @include tablets {
+        font-size: rem(16px);
         margin-bottom: rem(10px);
     }
 }
@@ -84,6 +85,9 @@
     font-weight: 300;
     font-style: normal;
     margin-bottom: rem(14px);
+    @include tablets {
+        font-size: rem(16px);
+    }
     @include phones {
         display: none;
     }
@@ -100,6 +104,7 @@
     font-weight: 500;
     text-transform: uppercase;
     transition: 0.4s;
+    border: none;
     &:hover {
         background-color: darken($dark, 8%);
     }

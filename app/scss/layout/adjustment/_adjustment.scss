@@ -191,13 +191,13 @@
 
 .mobile__transfer__menu {
     position: fixed;
-    top: 0;
-    right: -9999px;
+    top: -9999px;
+    right: 0;
     overflow: hidden;
     min-width: 100%;
     min-height: 100%;
     background: rgba(47, 50, 52, 0.93);
-    transition: right .5s;
+    transition: top .5s;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -250,4 +250,61 @@
 
 .transfer_item_link {
     font-size: rem(46px);
+}
+
+// modal menu
+.reviews__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(47, 50, 52, 0.97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+}
+
+.reviews__overlay-container {
+    position: relative;
+}
+
+.reviews__overlay-content {
+    width: rem(550px);
+    font-size: 16px;
+    border-radius: rem(5px);
+    padding: rem(15px);
+    background-color: #fff;
+    color: $dark;
+    text-align: center;
+    @include tablets {
+        font-size: rem(22px);
+    }
+    ;
+    @include phones {
+        width: rem(300px);
+        overflow: scroll;
+    }
+    ;
+}
+
+.reviews__overlay-close {
+    color: $dark;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: rem(26px);
+    text-align: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.reviews__overlay-content__name {
+    margin-bottom: rem(20px);
+}
+
+.reviews__overlay-content__discription {
+    line-height: 1.4;
 }

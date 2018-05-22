@@ -1,3 +1,4 @@
+
 // VARIABLES
 // adjustment
 const btn__close = document.querySelector('.btn__close');
@@ -19,7 +20,7 @@ const team__item = document.querySelectorAll('.team__accordeon__item');
 // cycle of --pop up-- menu__link
 for (let i = 0; i < menu__link.length; i++) {
   const link = menu__link[i];
-  link.addEventListener ('click', function (e) {
+  link.addEventListener('click', function (e) {
     e.preventDefault();
     console.log(link[i]);
     transfer__menu.style.top = '-9999px';
@@ -31,7 +32,7 @@ for (let i = 0; i < menu__link.length; i++) {
 for (let i = 0; i < team__item.length; i++) {
   const item_team = team__item[i];
   let classItemName = item_team.className;
-  
+
   item_team.addEventListener('click', function (e) {
     e.preventDefault();
     item_team.classList.add('team_accordeon_item_active');
@@ -44,10 +45,10 @@ for (let i = 0; i < team__item.length; i++) {
 // --pop up-- Event
 sidebar__mobile.addEventListener('click', function (event) {
   event.preventDefault();
-  transfer__menu.style.right = '0px';
+  transfer__menu.style.top = '0px';
 });
 btn__close.addEventListener('click', function (e) {
-  transfer__menu.style.right = '-9999px';
+  transfer__menu.style.top = '-9999px';
 });
 // ingridients Event
 btnIngridients.addEventListener('click', function (e) {
@@ -69,8 +70,8 @@ const sendButton = document.querySelector('#sendButton');
 sendButton.addEventListener('click', function (e) {
   e.preventDefault();
   var objFormNameText = [form.elements.name, form.elements.phone, form.elements.street,
-    form.elements.house, form.elements.houseEntr, form.elements.entrance, form.elements.floor, 
-    form.elements.apartment];
+  form.elements.house, form.elements.houseEntr, form.elements.entrance, form.elements.floor,
+  form.elements.apartment];
   if (objFormNameText[0]) {
     console.log(form.elements.name.value);
   }
@@ -97,8 +98,46 @@ sendButton.addEventListener('click', function (e) {
   }
 });
 
+// modal reviews 
 
 
+function createOverlay(name, text) {
+
+
+  const overlayElement = document.createElement('div');
+  overlayElement.classList.add('reviews__overlay');
+
+  const template = document.querySelector('#overlayReviews');
+  overlayElement.innerHTML = template.innerHTML;
+
+  const closeElement = overlayElement.querySelector('.reviews__overlay-close');
+  closeElement.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.body.removeChild(overlayElement);
+  });
+  const contentName = overlayElement.querySelector('.reviews__overlay-content__name');
+  contentName.innerHTML = name;
+
+  const contentText = overlayElement.querySelector('.reviews__overlay-content__discription');
+  contentText.innerHTML = text;
+
+  return overlayElement;
+};
+
+const openBtn = document.querySelectorAll('.review__btn__link');
+const getName = document.querySelector('.review__name');
+const getText = document.querySelector('.review__text');
+
+var name = getName.innerHTML;
+var text = getText.innerHTML;
+const succesOverlay = createOverlay(name, text);
+
+for (let i = 0; i < openBtn.length; i++) {
+  const evenBtn = openBtn[i];
+  evenBtn.addEventListener('click', () => {
+    document.body.appendChild(succesOverlay);
+  });
+};
 
 
 
