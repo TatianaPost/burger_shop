@@ -85,5 +85,12 @@
     font-weight: 300;
     line-height: 1.8;
     width: 100%;
+    font-size: rem(16px);
     padding: rem(40px) rem(20px);
+    @include tablets {
+        font-size: rem(24px);
+    }
+    @include phones {
+        font-size: rem(16px);
+    }
 }

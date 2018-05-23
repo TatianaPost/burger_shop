@@ -81,9 +81,6 @@
         margin-top: 0;
         margin-bottom: 0;
     }
-    @include phones {
-        font-size: rem(18px);
-    }
 }
 
 .best__blocks__description__text {
@@ -91,6 +88,6 @@
     font-size: rem(14px);
     color: $dark;
     @include phones {
-        font-size: rem(10px);
+        font-size: rem(16px);
     }
 }

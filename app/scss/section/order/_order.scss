@@ -124,9 +124,6 @@
 
 .form__label-checkbox:last-child {
     margin-left: rem(27px);
-    @include phones {
-        margin-left: rem(37px);
-    }
 }
 
 .form__input__checkbox:checked+.form__input__checkbox-fake::after {

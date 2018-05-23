@@ -10,9 +10,14 @@ const menu__link = document.querySelectorAll('.transfer_item_link');
 // section --burger--
 const btnIngridients = document.querySelector('.block__float-ingridients');
 const floatIngridients = document.querySelector('.float-ingridients__list');
-const btn__prev = document.querySelector('.btn__prev');
-const btn__next = document.querySelector('.btn__next');
+const btn__prev = document.querySelector('.slider_btn_prev');
+const btn__next = document.querySelector('.slider_btn_next');
 const ingridients__btn__close = document.querySelector('.ingridients__btn__close');
+
+
+
+
+
 // section --Team--
 const team__item = document.querySelectorAll('.team__accordeon__item');
 
@@ -20,7 +25,7 @@ const team__item = document.querySelectorAll('.team__accordeon__item');
 // cycle of --pop up-- menu__link
 for (let i = 0; i < menu__link.length; i++) {
   const link = menu__link[i];
-  link.addEventListener('click', function (e) {
+  link.addEventListener('click', (e) => {
     e.preventDefault();
     console.log(link[i]);
     transfer__menu.style.top = '-9999px';
@@ -31,34 +36,29 @@ for (let i = 0; i < menu__link.length; i++) {
 // cycle of --team person--
 for (let i = 0; i < team__item.length; i++) {
   const item_team = team__item[i];
-  let classItemName = item_team.className;
 
-  item_team.addEventListener('click', function (e) {
+  item_team.addEventListener('click', (e) => {
     e.preventDefault();
-    item_team.classList.add('team_accordeon_item_active');
-    // item_team.sublings();
-    // item_team.classList.remove('team_accordeon_item_active');
-    // console.log(classItemName);
+    item_team.classList.toggle('team_accordeon_item_active');
   });
 };
 // independent EVENTS
 // --pop up-- Event
-sidebar__mobile.addEventListener('click', function (event) {
-  event.preventDefault();
+sidebar__mobile.addEventListener('click', (e) => {
+  e.preventDefault();
   transfer__menu.style.top = '0px';
 });
-btn__close.addEventListener('click', function (e) {
+btn__close.addEventListener('click', (e) => {
   transfer__menu.style.top = '-9999px';
 });
 // ingridients Event
-btnIngridients.addEventListener('click', function (e) {
+btnIngridients.addEventListener('mouseover', (e) => {
   floatIngridients.style.opacity = '1';
-  // floatIngridients.style.left = '100%';
+  floatIngridients.style.left = '100%';
 });
-ingridients__btn__close.addEventListener('click', function (e) {
-  // debugger;
+ingridients__btn__close.addEventListener('click', (e) => {
   floatIngridients.style.opacity = '0';
-  // floatIngridients.style.left = '-9999px';
+  floatIngridients.style.left = '-9999px';
 });
 
 
@@ -67,7 +67,7 @@ ingridients__btn__close.addEventListener('click', function (e) {
 const form = document.querySelector('#form');
 const sendButton = document.querySelector('#sendButton');
 
-sendButton.addEventListener('click', function (e) {
+sendButton.addEventListener('click', (e) => {
   e.preventDefault();
   var objFormNameText = [form.elements.name, form.elements.phone, form.elements.street,
   form.elements.house, form.elements.houseEntr, form.elements.entrance, form.elements.floor,
@@ -135,6 +135,8 @@ const succesOverlay = createOverlay(name, text);
 for (let i = 0; i < openBtn.length; i++) {
   const evenBtn = openBtn[i];
   evenBtn.addEventListener('click', () => {
+    var name = getName.innerHTML;
+    var text = getText.innerHTML;
     document.body.appendChild(succesOverlay);
   });
 };

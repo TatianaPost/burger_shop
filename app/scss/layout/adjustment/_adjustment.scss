@@ -36,9 +36,7 @@
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
-    align-content: center; // @include desktop {
-    //     width: $desktop;
-    // }
+    align-content: center;
     @include tablets {
         max-width: $tablets;
         justify-content: center;
@@ -283,7 +281,7 @@
     }
     ;
     @include phones {
-        width: rem(300px);
+        width: rem(250px);
         overflow: scroll;
     }
     ;
@@ -292,13 +290,17 @@
 .reviews__overlay-close {
     color: $dark;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: rem(-35px);
+    right: rem(-40px);
     font-size: rem(26px);
     text-align: center;
     border: none;
     background: transparent;
     cursor: pointer;
+    @include phones {
+        top: rem(-33px);
+        right: rem(-37px);
+    }
 }
 
 .reviews__overlay-content__name {
