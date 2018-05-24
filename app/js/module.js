@@ -42,6 +42,7 @@ items.addEventListener('click', (e) =>{
 // section --menu--
 const menuList = document.querySelector('.menu__accordeon__list');
 const menuItem = document.querySelectorAll('.menu__accordeon__item');
+// const menuSection = document.querySelector('.menu');
 
 menuList.addEventListener('click', (e) => {
   e.preventDefault();
@@ -53,12 +54,12 @@ menuList.addEventListener('click', (e) => {
       closestMenuItem.classList.toggle('menu_accordeon_item_active');
     }
     else {
-      menuItem.forEach(function(item,index){
+      menuItem.forEach(function (closestMenuItem, index) {
         closestMenuItem.classList.remove('menu_accordeon_item_active');
       });
       closestMenuItem.classList.add('menu_accordeon_item_active');
     }
-  };
+  }
 });
 // CYCLES
 // cycle of --pop up-- menu__link
