@@ -20,6 +20,25 @@ const ingridients__btn__close = document.querySelector('.ingridients__btn__close
 
 // section --Team--
 const team__item = document.querySelectorAll('.team__accordeon__item');
+let items = document.querySelector('.team__accordeon__list');
+
+items.addEventListener('click', e =>{
+  e.preventDefault();
+  let target= e.target;
+
+  if (target.className ==='team__accordeon__link'){
+    let item = target.closest('.team__accordeon__item');
+    if (item.classList.contains('team_accordeon_item_active')) {
+      item.classList.toggle('team_accordeon_item_active');
+    }
+    else{
+      team__item.forEach(function(item,index){
+        item.classList.remove('team_accordeon_item_active');
+      })
+      item.classList.add('team_accordeon_item_active');
+    }
+  }
+})
 
 // CYCLES
 // cycle of --pop up-- menu__link
@@ -34,14 +53,14 @@ for (let i = 0; i < menu__link.length; i++) {
 };
 
 // cycle of --team person--
-for (let i = 0; i < team__item.length; i++) {
-  const item_team = team__item[i];
+// for (let i = 0; i < team__item.length; i++) {
+//   const item_team = team__item[i];
 
-  item_team.addEventListener('click', (e) => {
-    e.preventDefault();
-    item_team.classList.toggle('team_accordeon_item_active');
-  });
-};
+//   item_team.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     item_team.classList.toggle('team_accordeon_item_active');
+//   });
+// };
 // independent EVENTS
 // --pop up-- Event
 sidebar__mobile.addEventListener('click', (e) => {
@@ -134,7 +153,9 @@ const succesOverlay = createOverlay(name, text);
 
 for (let i = 0; i < openBtn.length; i++) {
   const evenBtn = openBtn[i];
-  evenBtn.addEventListener('click', () => {
+  evenBtn.addEventListener('click', (e) => {
+    // var target = e.target;
+    // const getText = target.previousSibling('.review__text');
     var name = getName.innerHTML;
     var text = getText.innerHTML;
     document.body.appendChild(succesOverlay);
