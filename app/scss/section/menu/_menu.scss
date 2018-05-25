@@ -79,6 +79,7 @@
     float: left;
     background: rgba(47, 50, 52, 0.93);
     overflow: hidden;
+    transition: width .5s;
 }
 
 .menu__accordeon__link__content__text {

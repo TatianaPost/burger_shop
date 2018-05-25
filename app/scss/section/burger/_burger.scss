@@ -14,6 +14,7 @@
     left: 0;
     right: 0;
     margin: 0 rem(10px);
+    overflow: hidden;
     @include tablets {
         height: 70%;
         align-content: center;
