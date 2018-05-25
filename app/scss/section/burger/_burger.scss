@@ -7,14 +7,13 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     height: 70%;
     position: relative;
     top: 0;
     left: 0;
     right: 0;
     margin: 0 rem(10px);
-    overflow: hidden;
     @include tablets {
         height: 70%;
         align-content: center;
