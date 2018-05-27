@@ -22,8 +22,31 @@ menu__link.forEach(link => {
   });
 });
 
-// burger --slider-- 
+// burger --slider--
 $(function () {
+
+  var coloringDots = function(index) {
+    $('.burger-slider')
+      .find('.bottom__dots-item')
+      .eq(index)
+      .addClass('active_dot')
+      .siblings()
+      .removeClass('active_dot');
+  };
+
+  var generateDots = function () {
+    $('.burger__carousel').each(function(){
+      var dot = $('<li>', {
+        attr : {
+          class : 'bottom__dots-item'
+        },
+        html : '<div class="bottom__dots-item__circle"></div>'
+      });
+      $('.bottom__dots-list').append(dot);
+    });
+  };
+
+  generateDots();
 
   var moveSlide = function (container, slideNum) {
     var 
@@ -40,6 +63,7 @@ $(function () {
       }, duration, function () {
         activeSlide.removeClass('burger_is-active');
         reqItem.addClass('burger_is-active');
+        coloringDots(slideNum);
       });
     };
   };
@@ -67,32 +91,16 @@ $(function () {
     moveSlide(container, reqItem);
 
   });
+
+  $('body').on('click', '.bottom__dots-item', function(){
+    var $this = $(this),
+      container = $this.closest('.burger-slider'),
+      index = $this.index();
+    moveSlide(container, index);
+    coloringDots(index);
+  });
+
 });
-//   $('.slider_btn_prev').on('click', function (e) {
-//     e.preventDefault();
-//     var $this = $(this),
-//       container = $this.closest('.burger-slider'),
-//       items = container.find('.burger__carousel'),
-//       activeSlide = items.filter('.burger_is-active')
-//     reqItem = activeSlide.prev(),
-//       reqIndex = reqItem.index(),
-//       list = container.find('.burger__carousel-list'),
-//       duration = 500;
-
-//     if (reqItem.length) {
-//       list.animate({
-//         'left': -reqIndex * 100 + '%'
-//       }, duration, function () {
-//         activeSlide.removeClass('burger_is-active');
-//         reqItem.addClass('burger_is-active');
-//       });
-//     }
-//   });
-// });
-
-
-
-
 
 // burger --ingridients--
 const btnIngridients = document.querySelector('.block__float-ingridients');
@@ -235,7 +243,31 @@ sendButton.addEventListener('click', (e) => {
 
 // var squared = array.map(num => num * num);
 // console.log(squared);
+// --one page scroll--
 
+// const sections = $('.section');
+// const display = $('.maincontent');
+
+// const performTransition = sectionEq() => {
+//   const position = `$(-sectionEq * 100)%`;
+
+//   display.css({
+//     transform: `translateY(${position})`,
+//     '-web-kit-transform': `translateY(${position})`
+//   });
+// }
+
+// $(document).on('wheel', e => {
+//   const deltaY = e.originalEvent.deltaY;
+
+//   if (deltaY > 0) {
+//     performTransition(2);
+//   }
+
+//   if (deltaY < 0) {
+//     console.log('up!');
+//   }
+// });
 
 
 

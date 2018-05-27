@@ -385,12 +385,7 @@
               </ul>
             
               <div class="bottom__dots">
-                <ul class="bottom__dots-list">
-                  <li class="bottom__dots-item"></li>
-                  <li class="bottom__dots-item"></li>
-                  <li class="bottom__dots-item"></li>
-                  <li class="bottom__dots-item"></li>
-                </ul>
+                <ul class="bottom__dots-list"></ul>
               </div>
 
           </main>
@@ -723,7 +718,7 @@
         </div>
       </section>
       <section class="section map">
-        <div class="map__block"></div>
+        <div class="map__block" id='map' style="width: 100%"></div>
         <footer class="footer">
           <div class="container container_footer">
             <div class="footer__left-side">
@@ -870,6 +865,51 @@
   </script>
   <script src="./libs/jquery-3.3.1.min.js"></script>
   <script src="./js/app.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+    var myPlacemark1, myPlacemark2, myPlacemark3;
+
+    function init() {
+      myMap = new ymaps.Map("map", {
+        center: [59.93337799, 30.34010308],
+        zoom: 12
+      });
+      myPlacemark1 = new ymaps.Placemark([59.93402348, 30.33998880], {
+        hintContent: 'Mr.Burger',
+        balloonContent: 'Ресторан быстрого питания, График работы: пн-вс 10:00 - 23:00'
+      }, {
+          iconLayout: 'default#image',
+          iconImageHref: './img/map/icon__point/map-marker.svg',
+          iconImageSize: [46, 58],
+          iconImageOffset: [-3, -42]
+        });
+      myPlacemark2 = new ymaps.Placemark([59.96180304, 30.40697009], {
+        hintContent: 'Mr.Burger',
+        balloonContent: 'Ресторан быстрого питания, График работы: пн-вс 10:00 - 23:00'
+      }, {
+          iconLayout: 'default#image',
+          iconImageHref: './img/map/icon__point/map-marker.svg',
+          iconImageSize: [46, 58],
+          iconImageOffset: [-3, -42]
+        });
+      myPlacemark3 = new ymaps.Placemark([59.95471786, 30.32426274], {
+        hintContent: 'Mr.Burger',
+        balloonContent: 'Ресторан быстрого питания, График работы: пн-вс 10:00 - 23:00'
+      }, {
+          iconLayout: 'default#image',
+          iconImageHref: './img/map/icon__point/map-marker.svg',
+          iconImageSize: [46, 58],
+          iconImageOffset: [-3, -42]
+        });
+
+      myMap.geoObjects.add(myPlacemark1);
+      myMap.geoObjects.add(myPlacemark2);
+      myMap.geoObjects.add(myPlacemark3);
+    }
+  </script>
 
 </body>
 
