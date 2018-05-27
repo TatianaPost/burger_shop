@@ -34,6 +34,10 @@
     top: 50%;
     z-index: 20;
     transform: translate(-50%);
+    transition: .3s;
+    &:hover {
+        color: $orange;
+    }
 }
 
 .slider_btn_prev {
@@ -47,6 +51,33 @@
     right: -13px;
     @include phones {
         right: rem(-4px);
+    }
+}
+
+.bottom__dots {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+}
+
+.bottom__dots-list {
+    display: flex;
+}
+
+.bottom__dots-item {
+    width: rem(10px);
+    height: rem(10px);
+    border-radius: 50%;
+    margin-right: rem(10px);
+    background-color: $orange;
+    transition: .3s;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($orange, 15%);
+    }
+    &:last-child {
+        margin-right: 0;
     }
 }
 

@@ -52,15 +52,19 @@ $(function () {
             container = $this.closest('.burger-slider'),
             items = $('.burger__carousel', container),
             activeItem = items.filter('.burger_is-active'),
-            nextItem = activeItem.next(),
-            prevItem = activeItem.prev();
+            existedItem, edgeItem, reqItem;
 
     if ($this.hasClass('slider_btn_next')) {// вперед
-      moveSlide(container, nextItem.index());
-    } else { //назад
-      moveSlide(container, prevItem.index());
+      existedItem = activeItem.next();
+      edgeItem = items.first();
     }
-        
+    if ($this.hasClass('slider_btn_prev')) { //назад
+      existedItem = activeItem.prev();
+      edgeItem = items.last();  
+    }
+    reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+    
+    moveSlide(container, reqItem);
 
   });
 });
