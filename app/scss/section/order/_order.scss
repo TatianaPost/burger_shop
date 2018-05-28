@@ -29,7 +29,7 @@
         margin: 0 auto;
         width: 65%;
     }
-    @include phones {
+    @include phones-big {
         width: 95%;
         overflow: hidden;
     }
@@ -44,7 +44,7 @@
         margin: 0 auto;
         width: 65%;
     }
-    @include phones {
+    @include phones-big {
         width: 95%;
     }
 }

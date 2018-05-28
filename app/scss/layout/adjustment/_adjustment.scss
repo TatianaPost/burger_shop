@@ -2,13 +2,15 @@
     width: 100%;
     height: 100%;
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
 }
 
 .maincontent {
     width: 100%;
     height: 100%;
     min-height: rem(650px);
+    transition: 1.5s;
+    will-change: transform;
     @include tablets {
         min-height: initial;
     }
@@ -39,7 +41,12 @@
     align-items: center;
     align-content: center;
     @include tablets {
+        min-height: initial;
         max-width: $tablets;
+        justify-content: center;
+    }
+    @include phones-big {
+        max-width: $smartphones-big;
         justify-content: center;
     }
     @include phones {
@@ -60,7 +67,7 @@
         text-align: center;
         margin-top: 0;
     }
-    @include phones {
+    @include phones-big {
         font-size: rem(42px);
     }
 }

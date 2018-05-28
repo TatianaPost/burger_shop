@@ -31,7 +31,7 @@
     @include tablets {
         flex: none;
     }
-    @include phones {
+    @include phones-big {
         flex-flow: column nowrap;
         justify-content: center;
         align-content: center;
@@ -43,7 +43,7 @@
     flex-direction: column;
     flex: 1;
     align-items: center;
-    @include phones {
+    @include phones-big {
         flex-direction: row;
         padding: 2px;
     }
@@ -87,7 +87,7 @@
     font-weight: 300;
     font-size: rem(14px);
     color: $dark;
-    @include phones {
+    @include phones-big {
         font-size: rem(16px);
     }
 }

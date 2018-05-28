@@ -16,10 +16,10 @@
 @function rem($px) {
     @return $px / 16px+0rem;
 }
+
 // @function procent($px, $%) {
 //     @return $px / $px * 100%+0%;
 // }
-
 //mobile mixin
 @mixin desktop {
     @media screen and (max-width: $desktop) {
@@ -35,6 +35,12 @@
 
 @mixin tablets {
     @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones-big {
+    @media screen and (max-width: $smartphones-big) {
         @content;
     }
 }

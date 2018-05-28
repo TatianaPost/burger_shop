@@ -8,18 +8,15 @@
     align-items: center;
     margin: 0 auto;
     width: 100%;
-    height: 70%;
+    height: 75%;
     position: relative;
     top: 0;
     left: 0;
     right: 0;
     margin: 0 rem(10px);
+    align-content: center;
+    justify-content: center;
     overflow: hidden;
-    @include tablets {
-        height: 75%;
-        align-content: center;
-        justify-content: center;
-    }
     @include phones {
         height: 95%;
     }
@@ -38,6 +35,10 @@
     &:hover {
         color: $orange;
     }
+    @include phones {
+        top: 20%;
+        transform: translate(-20%);
+    }
 }
 
 .slider_btn_prev {
@@ -50,7 +51,7 @@
 .slider_btn_next {
     right: -9px;
     @include phones {
-        right: rem(-4px);
+        right: rem(4px);
     }
 }
 
@@ -110,7 +111,13 @@
         height: 70%;
         flex-direction: column;
     }
+    @include phones-big {
+        width: rem(395px);
+    }
     @include phones {
+        width: 23rem;
+    }
+    @include phones-small {
         width: rem(320px);
     }
 }
@@ -135,10 +142,9 @@
         width: 90%;
         text-align: center;
     }
-    @include phones {
+    @include phones-big {
         width: 95%;
     }
-    
 }
 
 .burger__main__left-side__img {
@@ -178,7 +184,7 @@
     @include tablets {
         font-size: rem(20px);
     }
-    @include phones {
+    @include phones-big {
         font-size: rem(16px);
         padding-right: 0;
     }
@@ -264,20 +270,6 @@
         height: rem(250px);
         overflow: scroll;
     }
-}
-
-.ingridients__btn__close {
-    position: absolute;
-    width: rem(30px);
-    height: rem(30px);
-    right: 5%;
-    top: 4%;
-    font-size: rem(24px);
-    line-height: 1.4;
-    text-align: center;
-    color: $orange;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 .float-ingridients-main-img {
