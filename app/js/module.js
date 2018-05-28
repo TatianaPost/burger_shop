@@ -260,6 +260,8 @@ sendButton.addEventListener('click', (e) => {
 const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
 
 const setActiveMenuItem = itemEq => {
   $('.nav-sidebar__item')
@@ -330,7 +332,8 @@ $(document).on({
       default:
         break;
     }
-  }
+  },
+  touchmove: e => e.preventDefault()
 });
 
 $('[data-scroll-to]').on('click', (e) => {
@@ -339,7 +342,27 @@ $('[data-scroll-to]').on('click', (e) => {
   const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
   performTransition(target);
   
-})
+});
+
+if (isMobile) {
+  $(document).swipe({
+    swipe: function (
+      event,
+      direction,
+      distance,
+      duration,
+      fingerCount,
+      fingerData
+    ) {
+      const swipeDirection = direction === 'down' ? 'up' : 'down';
+      scrollToSection(swipeDirection);
+    }
+  });
+};
+
+
+
+
 
 
 
