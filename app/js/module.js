@@ -143,6 +143,8 @@ items.addEventListener('click', (e) => {
 const menuList = document.querySelector('.menu__accordeon__list');
 const menuItem = document.querySelectorAll('.menu__accordeon__item');
 
+
+
 menuList.addEventListener('click', (e) => {
   e.preventDefault();
   let target = e.target;
@@ -159,6 +161,14 @@ menuList.addEventListener('click', (e) => {
     }
   }
 });
+
+// $(document).on("click", e => {
+//   const $this = $(e.target);
+
+//   if (!$this.closest(".menu__accordeon__list").length) {
+//     closeItem($(".menu__accordeon__item"));
+//   }
+// });
 
 // modal reviews 
 
@@ -190,15 +200,14 @@ const getName = document.querySelector('.review__name');
 const getText = document.querySelector('.review__text');
 
 var name = getName.innerHTML;
-var text = getText.innerHTML;
-const succesOverlay = createOverlay(name, text);
 
 openBtn.forEach(evenBtn => {
   evenBtn.addEventListener('click', (e) => {
-    // var target = e.target;
-    // const getText = target.previousSibling('.review__text');
-    var name = getName.innerHTML;
-    var text = getText.innerHTML;
+    var target = e.target;
+    // var name = getText.previousSibling;
+    var getText = target.previousSibling;
+    var text = getText.previousSibling.innerHTML;
+    const succesOverlay = createOverlay(name, text);
     document.body.appendChild(succesOverlay);
   });
 });
@@ -314,34 +323,34 @@ const form = document.querySelector('#form');
 const sendButton = document.querySelector('#sendButton');
 
 sendButton.addEventListener('click', (e) => {
-  e.preventDefault();
-  var objFormNameText = [form.elements.name, form.elements.phone, form.elements.street,
-  form.elements.house, form.elements.houseEntr, form.elements.entrance, form.elements.floor,
-  form.elements.apartment];
-  if (objFormNameText[0]) {
-    console.log(form.elements.name.value);
-  }
-  if (objFormNameText[1]) {
-    console.log(form.elements.phone.value);
-  }
-  if (objFormNameText[2]) {
-    console.log(form.elements.street.value);
-  }
-  if (objFormNameText[3]) {
-    console.log(form.elements.house.value);
-  }
-  if (objFormNameText[4]) {
-    console.log(form.elements.houseEntr.value);
-  }
-  if (objFormNameText[5]) {
-    console.log(form.elements.entrance.value);
-  }
-  if (objFormNameText[6]) {
-    console.log(form.elements.floor.value);
-  }
-  if (objFormNameText[7]) {
-    console.log(form.elements.apartment.value);
-  }
+  // e.preventDefault();
+  // var objFormNameText = [form.elements.name, form.elements.phone, form.elements.street,
+  // form.elements.house, form.elements.houseEntr, form.elements.entrance, form.elements.floor,
+  // form.elements.apartment];
+  // if (objFormNameText[0]) {
+  //   console.log(form.elements.name.value);
+  // }
+  // if (objFormNameText[1]) {
+  //   console.log(form.elements.phone.value);
+  // }
+  // if (objFormNameText[2]) {
+  //   console.log(form.elements.street.value);
+  // }
+  // if (objFormNameText[3]) {
+  //   console.log(form.elements.house.value);
+  // }
+  // if (objFormNameText[4]) {
+  //   console.log(form.elements.houseEntr.value);
+  // }
+  // if (objFormNameText[5]) {
+  //   console.log(form.elements.entrance.value);
+  // }
+  // if (objFormNameText[6]) {
+  //   console.log(form.elements.floor.value);
+  // }
+  // if (objFormNameText[7]) {
+  //   console.log(form.elements.apartment.value);
+  // }
 });
 
 
