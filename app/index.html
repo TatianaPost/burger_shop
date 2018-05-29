@@ -603,7 +603,7 @@
           <h2 class="section__title section_title_order">
             закажите доставку
           </h2>
-          <form id="form" action="server.php" name="food-order">
+          <form id="form" action="server.php" method="POST">
             <div class="form__left-side">
 
               <div class="form__row">
@@ -689,7 +689,7 @@
                 </label>
 
                 <label class="form__label-checkbox">
-                  <input class="form__input__checkbox" name="nocall" type="checkbox">
+                  <input class="form__input__checkbox" name="needcash" type="checkbox">
                   <div class="form__input__checkbox-fake"></div>
                   <span class="form__title">потребуется сдача</span>
                 </label>
@@ -856,6 +856,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js"></script>
   <script src="./js/jquery.touchSwipe.min.js"></script>
   <script src="./js/app.min.js"></script>
+  <script src="./js/common.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script type="text/javascript">
     ymaps.ready(init);

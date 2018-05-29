@@ -107,6 +107,7 @@ const btnIngridients = document.querySelector('.block__float-ingridients');
 const floatIngridients = document.querySelector('.float-ingridients__list');
 const burger__container = document.querySelector('.burger-container');
 
+
 btnIngridients.addEventListener('mousemove', (e) => {
   floatIngridients.style.opacity = '1';
   floatIngridients.style.left = '100%';
@@ -319,39 +320,24 @@ if (isMobile) {
 
 // --Form--
 
-const form = document.querySelector('#form');
-const sendButton = document.querySelector('#sendButton');
+// const form = document.querySelector('#form');
+// const sendButton = document.querySelector('#sendButton');
 
-sendButton.addEventListener('click', (e) => {
-  // e.preventDefault();
-  // var objFormNameText = [form.elements.name, form.elements.phone, form.elements.street,
-  // form.elements.house, form.elements.houseEntr, form.elements.entrance, form.elements.floor,
-  // form.elements.apartment];
-  // if (objFormNameText[0]) {
-  //   console.log(form.elements.name.value);
-  // }
-  // if (objFormNameText[1]) {
-  //   console.log(form.elements.phone.value);
-  // }
-  // if (objFormNameText[2]) {
-  //   console.log(form.elements.street.value);
-  // }
-  // if (objFormNameText[3]) {
-  //   console.log(form.elements.house.value);
-  // }
-  // if (objFormNameText[4]) {
-  //   console.log(form.elements.houseEntr.value);
-  // }
-  // if (objFormNameText[5]) {
-  //   console.log(form.elements.entrance.value);
-  // }
-  // if (objFormNameText[6]) {
-  //   console.log(form.elements.floor.value);
-  // }
-  // if (objFormNameText[7]) {
-  //   console.log(form.elements.apartment.value);
-  // }
-});
+
+$('#form').on('submit', submitForm);
+
+function submitForm(e) {
+  e.preventDefault();
+  var target = $(e.target),
+    data = target.serialize(),
+    type = target.attr('method'),
+    url = target.attr('action');
+  console.log(data);
+  console.log(type);
+  console.log(url);
+
+};
+
 
 
 
