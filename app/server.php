@@ -43,6 +43,7 @@
       </ul>
     </body>
     </html>';
+    
     $headers = "From: Mr.Burgers <egorov-by-egorov@mail.ru>\r\n".
     "MIME-Version: 1.0" . "\r\n" .
     "Content-type: text/html; charset=UTF-8" . "\r\n";

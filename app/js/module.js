@@ -107,11 +107,12 @@ const btnIngridients = document.querySelector('.block__float-ingridients');
 const floatIngridients = document.querySelector('.float-ingridients__list');
 const burger__container = document.querySelector('.burger-container');
 
-
 btnIngridients.addEventListener('mousemove', (e) => {
   floatIngridients.style.opacity = '1';
   floatIngridients.style.left = '100%';
-});
+  });
+
+
 burger__container.addEventListener('mouseover', (e) => {
   floatIngridients.style.opacity = '0';
   floatIngridients.style.left = '-9999px';
@@ -318,11 +319,7 @@ if (isMobile) {
   });
 };
 
-// --Form--
-
-// const form = document.querySelector('#form');
-// const sendButton = document.querySelector('#sendButton');
-
+// Form
 
 $('#form').on('submit', submitForm);
 
@@ -356,6 +353,28 @@ var ajaxForm = function(form) {
   })
 };
 
+//Yandex map
+
+ymaps.ready(init);
+
+function init() {
+  var map = new ymaps.Map('map', {
+    center: [59.94, 30.32],
+    zoom: 12,
+    controls: ['zoomControl'],
+    behaviors: ['drag']
+  });
+
+  var placemark = new ymaps.Placemark([59.97, 30.31], {
+      hintContent: '<div class="map__hint">улица Литералов дом 19 </div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литералов, д. 19',
+        '</div>'
+      ].join('')
+  });
+  map.geoObjects.add(placemark);
+}
 
 
 
