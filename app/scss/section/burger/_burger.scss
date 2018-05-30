@@ -35,7 +35,11 @@
     &:hover {
         color: $orange;
     }
-    @include phones {
+    @include phones-big {
+        top: 30%;
+        transform: translate(-30%);
+    }
+    @include phones-small {
         top: 20%;
         transform: translate(-20%);
     }
@@ -95,6 +99,13 @@
     position: absolute;
     top: 0;
     left: 0;
+    @include phones-big {
+        top: 10%;
+    }
+    @include phones-small {
+        top: 0;
+    }
+    
 }
 
 .burger__carousel {
@@ -115,7 +126,7 @@
         width: rem(395px);
     }
     @include phones {
-        width: 23rem;
+        width: 22.5rem;
     }
     @include phones-small {
         width: rem(320px);

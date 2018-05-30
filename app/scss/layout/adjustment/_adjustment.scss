@@ -27,6 +27,7 @@
     @include tablets {
         min-height: initial;
     }
+    @include phones {}
 }
 
 .container {
@@ -322,7 +323,7 @@
 .success {
     color: #007700;
 }
+
 .error {
     color: #990000;
 }
-
