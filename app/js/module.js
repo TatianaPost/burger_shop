@@ -357,6 +357,40 @@ var ajaxForm = function(form) {
 
 ymaps.ready(init);
 
+var placemarks = [
+  {
+    latitude: 59.97,
+    longitude: 30.31,
+    hintContent: '<div class="map__hint">улица Литералов дом 19 </div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литералов, д. 19',
+      '</div>'
+    ]
+  },
+  {
+    latitude: 59.94,
+    longitude: 30.25,
+    hintContent: '<div class="map__hint">Малый проспект В О, д 64</div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д 64',
+      '</div>'
+    ]
+  },
+  {
+    latitude: 59.93,
+    longitude: 30.34,
+    hintContent: '<div class="map__hint">наб. реки ФонтанкиБ д 56 </div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      'Самые вкусные бургеры у нас! Заходите по адресу: наб. реки ФонтанкиБ д 56',
+      '</div>'
+    ]
+  }
+
+];
+
 function init() {
   var map = new ymaps.Map('map', {
     center: [59.94, 30.32],
@@ -365,16 +399,68 @@ function init() {
     behaviors: ['drag']
   });
 
-  var placemark = new ymaps.Placemark([59.97, 30.31], {
-      hintContent: '<div class="map__hint">улица Литералов дом 19 </div>',
-      balloonContent: [
-        '<div class="map__balloon">',
-        'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литералов, д. 19',
-        '</div>'
-      ].join('')
+  placemarks.forEach(function(obj) {
+    var placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+      hintContent: obj.hintContent,
+      balloonContent: obj.balloonContent.join('')
+    },
+    {
+    iconLayout: 'default#image',
+    iconImageHref: '../img/map/icon__point/map-marker.svg',
+    iconImageSize: [46, 57],
+    iconImageOffset: [-23, -57]
+    });
+    map.geoObjects.add(placemark);
   });
-  map.geoObjects.add(placemark);
 }
+  // var placemark1 = new ymaps.Placemark([59.97, 30.31], {
+  //     hintContent: '<div class="map__hint">улица Литералов дом 19 </div>',
+  //     balloonContent: [
+  //       '<div class="map__balloon">',
+  //       'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литералов, д. 19',
+  //       '</div>'
+  //     ].join('')
+  // },
+  // {
+  //   iconLayout: 'default#image',
+  //   iconImageHref: '../img/map/icon__point/map-marker.svg',
+  //   iconImageSize: [46, 57],
+  //   iconImageOffset: [-23, -57]
+  // });
+
+  // var placemark2 = new ymaps.Placemark([59.90, 30.31], {
+  //     hintContent: '<div class="map__hint">улица Литералов дом 19 </div>',
+  //     balloonContent: [
+  //       '<div class="map__balloon">',
+  //       'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литералов, д. 19',
+  //       '</div>'
+  //     ].join('')
+  // },
+  // {
+  //   iconLayout: 'default#image',
+  //   iconImageHref: '../img/map/icon__point/map-marker.svg',
+  //   iconImageSize: [46, 57],
+  //   iconImageOffset: [-23, -57]
+  // });
+
+  // var placemark3 = new ymaps.Placemark([59.99, 30.31], {
+  //     hintContent: '<div class="map__hint">улица Литералов дом 19 </div>',
+  //     balloonContent: [
+  //       '<div class="map__balloon">',
+  //       'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литералов, д. 19',
+  //       '</div>'
+  //     ].join('')
+  // },
+  // {
+  //   iconLayout: 'default#image',
+  //   iconImageHref: '../img/map/icon__point/map-marker.svg',
+  //   iconImageSize: [46, 57],
+  //   iconImageOffset: [-23, -57]
+  // });
+  // map.geoObjects.add(placemark1);
+  // map.geoObjects.add(placemark2);
+  // map.geoObjects.add(placemark3);
+// }
 
 
 
