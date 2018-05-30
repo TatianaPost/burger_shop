@@ -326,19 +326,35 @@ if (isMobile) {
 
 $('#form').on('submit', submitForm);
 
-function submitForm(e) {
-  e.preventDefault();
-  var target = $(e.target),
-    data = target.serialize(),
-    type = target.attr('method'),
-    url = target.attr('action');
-  console.log(data);
-  console.log(type);
-  console.log(url);
+function submitForm(ev) {
+  ev.preventDefault();
+  var form = $(ev.target);
+      request = ajaxForm(form);
 
+  request.done(function(msg) {
+    var mes = msg.mes,
+        status = msg.status;
+    if (status === 'OK') {
+      form.append('<p class="success">' + mes + '</p>');
+    } else {
+      form.append('<p class="error">' + mes + '</p>');
+    };
+  });
+  request.fail(function (jqXHR, textStatus) {
+    alert("Request failed: " + textStatus);
+  });
 };
-
-
+// Univercity function for work with all forms
+var ajaxForm = function(form) {
+  var data = form.serialize(),
+      url = form.attr('action');
+  return $.ajax({
+    type: 'POST',
+    url: url,
+    dataType: 'JSON',
+    data: data
+  })
+};
 
 
 

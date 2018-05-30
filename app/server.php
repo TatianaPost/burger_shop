@@ -48,11 +48,13 @@
     "Content-type: text/html; charset=UTF-8" . "\r\n";
 
     $mail = mail('egorov-family@mail.ru', 'Заказ', $mail_message, $headers);
-    
+    $data = [];
     if ($mail) {
-      echo 'done';
+      $data['status'] = "OK";
+      $data['mes'] = "Заказ успешно отправлен";
     } else {
-      echo 'error';
+      $data['status'] = "NO";
+      $data['mes'] = "На сервере произошла ошибка";
     }
-
+    echo json_encode($data);
 ?>
